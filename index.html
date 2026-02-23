@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors</title>
+    <meta name="description" content="Play Rock Paper Scissors against the computer with a sleek, modern UI." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <h1 class="title">Rock <span class="accent">Paper</span> Scissors</h1>
+            <p class="subtitle">Challenge the machine. Best of luck! 🎮</p>
+        </header>
+
+        <div class="scoreboard">
+            <div class="score-card" id="player-score-card">
+                <div class="score-label">You</div>
+                <div class="score-value" id="player-score">0</div>
+            </div>
+            <div class="vs-badge">VS</div>
+            <div class="score-card" id="computer-score-card">
+                <div class="score-label">Computer</div>
+                <div class="score-value" id="computer-score">0</div>
+            </div>
+        </div>
+
+        <div class="arena">
+            <div class="fighter" id="player-display">
+                <div class="fighter-label">Your Move</div>
+                <div class="choice-emoji" id="player-emoji">❓</div>
+            </div>
+            <div class="arena-divider">
+                <div class="divider-line"></div>
+                <div class="clash-icon" id="clash-icon">⚡</div>
+                <div class="divider-line"></div>
+            </div>
+            <div class="fighter" id="computer-display">
+                <div class="fighter-label">Computer</div>
+                <div class="choice-emoji" id="computer-emoji">❓</div>
+            </div>
+        </div>
+
+        <div class="result-banner" id="result-banner">
+            <span id="result-text">Pick a move to start!</span>
+        </div>
+
+        <div class="choices">
+            <button class="choice-btn" id="btn-rock" onclick="playGame('rock')" aria-label="Rock">
+                <span class="choice-icon">🪨</span>
+                <span class="choice-name">Rock</span>
+            </button>
+            <button class="choice-btn" id="btn-paper" onclick="playGame('paper')" aria-label="Paper">
+                <span class="choice-icon">📄</span>
+                <span class="choice-name">Paper</span>
+            </button>
+            <button class="choice-btn" id="btn-scissors" onclick="playGame('scissors')" aria-label="Scissors">
+                <span class="choice-icon">✂️</span>
+                <span class="choice-name">Scissors</span>
+            </button>
+        </div>
+
+        <button class="reset-btn" id="reset-btn" onclick="resetGame()">
+            🔄 Reset Game
+        </button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
